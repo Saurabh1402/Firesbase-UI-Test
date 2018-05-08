@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FirebaseTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">243373179738829</string>
+    <string name="facebook_application_id" translatable="false">243373179738829</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb243373179738829</string>
+    <string name="default_notification_channel_id">21</string>
+</resources>
