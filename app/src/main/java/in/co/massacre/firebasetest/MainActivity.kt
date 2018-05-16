@@ -1,5 +1,6 @@
 package `in`.co.massacre.firebasetest
 
+import `in`.co.massacre.firebasetest.MyFirebaseInstanceIDService.SHRD_PREF
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         setSupportActionBar(toolbar)
         mAuth=FirebaseAuth.getInstance()
 
@@ -65,7 +67,8 @@ Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     RC_SIGN_IN)
 
         }
-
+        var token:String=getSharedPreferences(SHRD_PREF,MODE_PRIVATE)!!.getString(MyFirebaseInstanceIDService.token,null)
+        Log.d("Token",token);
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
